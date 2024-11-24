@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+table, tr ,th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+table thead{
+    padding: 20px;
+    height: 50px;
+}
+table{
+    width: 100%;
+    min-height: 250px;
+    max-width: 1000px;
+    margin: 50px auto;
+    
+}
+
+/* /////////////////////// loader */
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #007BFF;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loader{
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+  }
+/* /////////////////////// loder */
+
+
+.container1 {
+    max-width: 500px;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .label1 {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .input1 {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .textarea1 {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .submitInput1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitInput1:hover {
+    background-color: #0056b3;
+  }
+  
+  .check-list{
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    position: absolute;
+    right: 540px;
+    top: 120px;
+    
+  }
+  

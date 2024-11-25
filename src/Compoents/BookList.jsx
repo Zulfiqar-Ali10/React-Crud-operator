@@ -9,17 +9,17 @@ export default function BookList() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    console.log(formData , 'formData')
-    
+    console.log(formData, 'formData')
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData , [name]: value })
+        setFormData({ ...formData, [name]: value })
     };
 
     const fetchBookDetails = async () => {
         try {
             const response = await axios.get(`https://6742d9d9b7464b1c2a62dd44.mockapi.io/book/${id}`);
-            setFormData(response.data); 
+            setFormData(response.data);
         } catch (error) {
             console.error("Error fetching book details:", error);
             toast.error("Failed to fetch book details.");

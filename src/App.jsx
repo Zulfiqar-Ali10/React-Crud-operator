@@ -6,7 +6,6 @@ import About from './Pages/About'
 import Contactus from './Pages/Contactus'
 import Books from './Pages/Books'
 import Home from './Compoents/Home'
-import { ToastContainer } from 'react-toastify'
 import BookList from './Compoents/BookList'
 
 
@@ -26,7 +25,7 @@ function App() {
         <Route path="/books/edit/:id" element={<Home />} />
         <Route path="/books/add" element={<Home />} />
       </Routes>
-      <ToastContainer />
+    
     </>
   )
 }

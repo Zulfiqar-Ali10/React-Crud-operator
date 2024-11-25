@@ -28,16 +28,16 @@ export default function Books() {
     try {
       setdelLoading(id);
       const response = await axios.delete(`https://6742d9d9b7464b1c2a62dd44.mockapi.io/book/${id}`);
-       setdelLoading(null);
-       API();
-       toast.success("Item deleted Successfully.");
-      } catch (error) {
-        console.error("Error deleting book details:", error);
-        setdelLoading(null);
-        toast.error("Failed to deleting book details.");
+      setdelLoading(null);
+      API();
+      toast.success("Item deleted Successfully.");
+    } catch (error) {
+      console.error("Error deleting book details:", error);
+      setdelLoading(null);
+      toast.error("Failed to deleting book details.");
     }
-};
-  
+  };
+
   useEffect(() => {
     API();
   }, []);
@@ -63,22 +63,22 @@ export default function Books() {
           <tbody>
             {data?.length ? (
               <>
-              {data?.map((item, index) => {
-                return (
-                <tr key={index}>
-                  <td>{item.id}</td>
-                  <td>{item.book_name}</td>
-                  <td>{item.auther}</td>
-                  <td>{item.price}</td>
-                  <td>
-                    <button className='check-list1' onClick={() => navigate(`/books/edit/${item.id}`)}>Edit</button>
-                    <button className='check-list1 check-list2' disabled={delloading == item.id} onClick={() => deleteBookDetails(item.id)}>{delloading === item.id ? 'Deleting...' : 'Delete'}</button>
-                  </td>
-                </tr>
-              );
-            })}
-            </>
-          ): <h1 className='no-data'>No Data Found</h1>}
+                {data?.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{item.id}</td>
+                      <td>{item.book_name}</td>
+                      <td>{item.auther}</td>
+                      <td>{item.price}</td>
+                      <td>
+                        <button className='check-list1' onClick={() => navigate(`/books/edit/${item.id}`)}>Edit</button>
+                        <button className='check-list1 check-list2' disabled={delloading == item.id} onClick={() => deleteBookDetails(item.id)}>{delloading === item.id ? 'Deleting...' : 'Delete'}</button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </>
+            ) : <h1 className='no-data'>No Data Found</h1>}
           </tbody>
         </table>
       )}

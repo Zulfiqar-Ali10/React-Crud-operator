@@ -119,12 +119,13 @@ table{
   .check-list1{
     background-color: #007BFF;
     color: white;
-    padding: 8px 20px;
-    border-radius: 8px; 
+    padding: 6px 30px;
+    border-radius: 10px; 
+    margin: 6px 0;
   }
   .check-list2{
     background-color: red;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .no-data{
     font-size: 30px;

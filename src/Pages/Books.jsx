@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 export default function Books() {
   const [loading, setLoading] = useState(true);
-  const [delloading, setdelLoading] = useState(false);
+  const [delloading, setdelLoading] = useState(null);
   const [data, setData] = useState([]);
   const navigate = useNavigate()
 
@@ -26,13 +26,14 @@ export default function Books() {
 
   const deleteBookDetails = async (id) => {
     try {
-      setdelLoading(true);
+      setdelLoading(id);
       const response = await axios.delete(`https://6742d9d9b7464b1c2a62dd44.mockapi.io/book/${id}`);
-       setdelLoading(false);
+       setdelLoading(null);
        API();
        toast.success("Item deleted Successfully.");
       } catch (error) {
         console.error("Error deleting book details:", error);
+        setdelLoading(null);
         toast.error("Failed to deleting book details.");
     }
 };
@@ -71,7 +72,7 @@ export default function Books() {
                   <td>{item.price}</td>
                   <td>
                     <button className='check-list1' onClick={() => navigate(`/books/edit/${item.id}`)}>Edit</button>
-                    <button className='check-list1 check-list2' disabled={delloading} onClick={() => deleteBookDetails(item.id)}>{delloading ? 'Deleting...' : 'Delete'}</button>
+                    <button className='check-list1 check-list2' disabled={delloading == item.id} onClick={() => deleteBookDetails(item.id)}>{delloading === item.id ? 'Deleting...' : 'Delete'}</button>
                   </td>
                 </tr>
               );

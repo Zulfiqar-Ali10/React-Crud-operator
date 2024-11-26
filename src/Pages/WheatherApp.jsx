@@ -41,7 +41,7 @@ export default function WheatherApp() {
       <Header/>
         <div className="weather-container">
             <h1 className="wheather-text">WHEATHER APP</h1>
-            <input className="input2" type="text" placeholder="Enter City Name" value={city} onChange={handleCity} onKeyDown={enter} />
+            <input className="inputs" type="text" placeholder="Enter City Name" value={city} onChange={handleCity} onKeyDown={enter} />
             <button onClick={handleClick} className="wheatherbtn">Get Weather</button>
             {weather &&
                 <>

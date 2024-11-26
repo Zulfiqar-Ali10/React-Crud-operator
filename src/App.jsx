@@ -3,10 +3,9 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Services from './Pages/Services'
 import About from './Pages/About'
-import Contactus from './Pages/Contactus'
 import Books from './Pages/Books'
 import Home from './Compoents/Home'
-import BookList from './Compoents/BookList'
+import WheatherApp from './Pages/WheatherApp'
 
 
 
@@ -20,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contactus />} />
+        <Route path="/wheatherapp" element={<WheatherApp />} />
         <Route path="/books" element={<Books />} />
         <Route path="/books/edit/:id" element={<Home />} />
         <Route path="/books/add" element={<Home />} />

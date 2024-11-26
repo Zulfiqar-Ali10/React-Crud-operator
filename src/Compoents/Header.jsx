@@ -30,7 +30,7 @@ export default function Header() {
               <NavLink to="/" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Home</NavLink>
               <NavLink to="/services" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Services</NavLink>
               <NavLink to="/about" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">About</NavLink>
-              <NavLink to="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Contact</NavLink>
+              <NavLink to="/wheatherapp" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">WheatherApp</NavLink>
               <NavLink to="/books" className="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Books</NavLink>
             </div>
 
